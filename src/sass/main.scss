@@ -1,0 +1,40 @@
+
+@import "theme";
+@import "typography";
+
+
+body {
+  font-family: $font-stack;
+}
+
+
+.vendor-prefix-test {
+	display: flex;
+}
+
+
+.message {
+  border: 1px solid $grey-4;
+  padding: 10px;
+}
+
+.success {
+  @extend .message;
+  border-color: $success;
+  padding: 25px
+}
+
+.error {
+  @extend .message;
+  border-color: $error;
+  padding: 50px
+}
+
+.warning {
+  @extend .message;
+  border-color: $warning;
+  padding: 75px
+}
+
+
+
