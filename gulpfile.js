@@ -4,6 +4,7 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var inject = require('gulp-inject');
 var autoprefixer = require('gulp-autoprefixer');
+var del = require('del');
 var config = JSON.parse(fs.readFileSync('./config.json'));
 var templateInput = config.paths.templates.src;
 var templateOutput = config.paths.templates.dest;
@@ -99,6 +100,11 @@ gulp.task('images', () => {
 gulp.task('js', () => {
   return gulp.src(jsInput)
     .pipe(gulp.dest(jsOutput))
+});
+
+// clean up by deleting the 'build' directory
+gulp.task('clean', () => {
+  return del.sync('build');
 });
 
 // run gulp build

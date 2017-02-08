@@ -12,5 +12,8 @@ npm install --save-dev gulp-inject
 Install autoprefixer for CSS vendor-prefix post-processing:
 $ npm install gulp-autoprefixer --save-dev
 
+Install del for deleting files/folders
+$ npm install del --save-dev
+
 Get a default package.json:
 $ npm init -y
